@@ -1,0 +1,6 @@
+data/_tmp filter=lfs diff=lfs merge=lfs -text
+data/journal filter=lfs diff=lfs merge=lfs -text
+data/local.0 filter=lfs diff=lfs merge=lfs -text
+data/local.ns filter=lfs diff=lfs merge=lfs -text
+data/mongod.lock filter=lfs diff=lfs merge=lfs -text
+data/storage.bson filter=lfs diff=lfs merge=lfs -text
