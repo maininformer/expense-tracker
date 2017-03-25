@@ -10,7 +10,7 @@ else
 fi
 
 # Start MongoDB service
-/usr/bin/mongod --dbpath /data --nojournal &
+/usr/bin/mongod --dbpath /data &
 while ! nc -vz localhost 27017; do sleep 1; done
 
 # Create User
