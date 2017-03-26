@@ -10,9 +10,19 @@ mongoose.connect app.get("uri"), {db: {safe: true}}, (err) ->
 
 require './models/user'
 require './models/expense'
-# app.get '/',(req, res) ->
-# 	res.send "Hello, How are you?"
 
-# app.listen app.get('port'), ->
-# 	console.log "Listening on port #{app.get('port')}"
+app.use express.bodyParser()
 
+# RESTful users
+app.post   '/users',    users.create
+app.get    '/users',    users.read
+app.get    '/users:id', users.read
+app.put    '/users:id', users.update
+app.delete '/users:id', users.delete
+
+# RESTful expenses
+app.post   '/expenses',    expenses.create
+app.get    '/expenses',    expenses.read
+app.get    '/expenses:id', expenses.read
+app.put    '/expenses:id', expenses.update
+app.delete '/expenses:id', expenses.delete
