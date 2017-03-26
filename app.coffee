@@ -8,8 +8,8 @@ mongoose.connect app.get("uri"), {db: {safe: true}}, (err) ->
 	console.log "Mongoose - connection error: " + err if err?
   	console.log "Mongoose - connection OK"
 
-require './models/user'
-require './models/expense'
+require './model/user'
+require './model/expense'
 
 app.use express.bodyParser()
 
