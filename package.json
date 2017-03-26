@@ -1,10 +1,14 @@
 {
-  "name": "widget-factory-api",
-  "description": "API for widgets.",
+  "name": "expense-tracker",
+  "description": "Tracks Expense; very exciting!",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
     "coffee-script": "latest",
-    "express": "3.x"
+    "express": "3.x",
+    "mongoose": "latest"
+    },
+  "scripts": {
+  	"start": "coffee -w app.coffee"
   }
 }

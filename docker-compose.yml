@@ -9,13 +9,13 @@ services:
     ports:
       - "4000:4000"
   mongo:
-      build: ./docker/mongo
-      environment:
-      - ENV
-      - MONGODB_USERNAME=user
-      - MONGODB_PASSWORD=password
-      - MONGODB_DBNAME=expense-tracker
-      volumes:
-        - "./data/:/data/"
-      ports:
-        - "27017:27017"
+    build: ./docker/mongo
+    environment:
+    - ENV
+    - MONGODB_USERNAME=user
+    - MONGODB_PASSWORD=password
+    - MONGODB_DBNAME=expense-tracker
+    volumes:
+      - "./data/:/data/"
+    ports:
+      - "27017:27017"
