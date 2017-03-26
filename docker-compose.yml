@@ -2,13 +2,12 @@ version: '2'
 services:
   coffee:
     build: ./docker/coffee
-    environment:
-      - ENV
-      - DB_URL_MONGO=mongodb://mongo:27017/data
     volumes:
       - ".:/expense-tracker/"
     links:
       - mongo
+    ports:
+      - "4000:4000"
   mongo:
       build: ./docker/mongo
       environment:
